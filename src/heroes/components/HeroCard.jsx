@@ -2,14 +2,13 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const CharacterByHero = ({alter_ego, characters}) => {
-    if(alter_ego !== characters) return (<></>);
+    if(alter_ego == characters) return (<></>);
     return <p>{characters}</p>
 }
 
 export const HeroCard = ({
   id,
   superhero,
-  publisher,
   alter_ego,
   first_appearance,
   characters
@@ -46,7 +45,6 @@ export const HeroCard = ({
 HeroCard.propTypes = {
   id: PropTypes.string.isRequired,
   superhero: PropTypes.string.isRequired,
-  publisher: PropTypes.string.isRequired,
   alter_ego: PropTypes.string.isRequired,
   first_appearance: PropTypes.string.isRequired,
   characters: PropTypes.string.isRequired
